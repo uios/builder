@@ -1,0 +1,3 @@
+@media (max-width: 240px) { 
+  .mnu { width: calc(100%); } 
+}

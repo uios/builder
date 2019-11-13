@@ -1,0 +1,6 @@
+@media (max-width: 1440px) {
+  [data-style='ThreeColumn'] .avatar.format[data-name]:after {top: calc(((100% - 48px)/2) - 25%);font-size: 36px;line-height: 48px;height: 48px;}
+  .ads .title {font-size: 50px;}
+  .ads .description {font-size: 24px;max-height: 90px;line-height: 30px;}
+  .ads .watch {font-size: 30px;}
+}

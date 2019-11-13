@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang='en-US' title='uiOS - Builder'>
+
+  <head>
+    <title>uiOS - Builder</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=5.0,viewport-fit=cover">
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="Description" content="A web development platform built on the JAMstack.">
+    <meta name="theme-color" content="#2574d7">
+    <link rel="apple-touch-startup-image" href="/url/png/ico/logo-builder.png">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="./manifest.json">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link async="" rel="stylesheet" href="./index.css" media="all">
+    <link async="" rel="stylesheet" href="./url/css/blocks.css" media="all">
+    <link defer="" rel="stylesheet" href="./url/css/builder.css" media="all">
+    <link defer="" rel="stylesheet" media="(max-width: 2560px)" href="./url/css/2560px.css">
+    <link defer="" rel="stylesheet" media="(max-width: 1920px)" href="./url/css/1920px.css">
+    <link defer="" rel="stylesheet" media="(max-width: 1600px)" href="./url/css/1600px.css">
+    <link defer="" rel="stylesheet" media="(max-width: 1440px)" href="./url/css/1440px.css">
+    <link defer="" rel="stylesheet" media="(max-width: 1366px)" href="./url/css/1366px.css">
+    <link defer="" rel="stylesheet" media="(max-width: 1280px)" href="./url/css/1280px.css">
+    <link defer="" rel="stylesheet" media="(max-width: 1172px)" href="./url/css/1172px.css">
+    <link defer="" rel="stylesheet" media="(max-width: 1024px)" href="./url/css/1024px.css">
+    <link defer="" rel="stylesheet" media="(max-width: 960px)" href="./url/css/960px.css">
+    <link defer="" rel="stylesheet" media="(max-width: 768px)" href="./url/css/768px.css">
+    <link defer="" rel="stylesheet" media="(max-width: 640px)" href="./url/css/640px.css">
+    <link defer="" rel="stylesheet" media="(max-width: 540px)" href="./url/css/540px.css">
+    <link defer="" rel="stylesheet" media="(max-width: 425px)" href="./url/css/425px.css">
+    <link defer="" rel="stylesheet" media="(max-width: 375px)" href="./url/css/375px.css">
+    <link defer="" rel="stylesheet" media="(max-width: 360px)" href="./url/css/360px.css">
+    <link defer="" rel="stylesheet" media="(max-width: 320px)" href="./url/css/320px.css">
+    <link defer="" rel="stylesheet" media="(max-width: 240px)" href="./url/css/240px.css">
+  </head>
+
+  <body data-nojs onload="init()">
+
+    <noscript>
+      <div>Javascript Required</div>
+      <div>We're sorry, but this application doesn't work properly without JavaScript enabled. If you can't enable Javscript, try visiting our <a>optimized website</a></div>
+      <style>
+        body { background: #ff3b30; overflow: hidden; margin: 0; -webkit-font-smoothing: antialiased; }
+        noscript { border: 1px solid #bbb; padding: 10px; border-radius: 3px; position: absolute; top: 36px; left: 0; right: 0; bottom: 36px; width: calc(100% - 40px); height: 86px; margin: auto; background: whitesmoke; z-index: 999999999999999999999999; }
+        noscript div { height: 36px; font-weight: bolder; }
+        noscript div:first-child { line-height: calc(36px); font-family: Lato Regular; font-weight: bolder; font-size: 18px; }
+        noscript div:nth-child(2) { line-height: calc(50px/3); font-family: Lato Light; font-weight: bolder; font-size: 13px; }
+        [data-nojs] > :not(noscript) { display: none; }
+      </style>
+    </noscript>
+
+    <div id='progress' class='progress'><div class='filler'></div></div>
+    <div id='notifications' class='notifications' role='complementary'></div>
+
+    <div class='app content' role='main'>
+
+      <div class="tab" data-hash="builder">      
+
+        <div class='absolute before' style='top:0px;width:100%;height:50px;background-image:linear-gradient(to top, rgba(0,0,0,0),rgba(0,0,0,1) calc(100%/2));z-index:123;'></div>
+
+        <div class="absolute flex invert" style="line-height:50px;font-size:24px;width:100%;height:50px;top:0px;justify-content:space-between;z-index:1234;">
+            <div id="shop-menu" class="bkgctn" onclick="byId('app-menu').toggleClass('open');" style="width:50px;height:50px;background-size:20px;background-image:url(./url/svg/menu.svg)"></div>
+            <div id="shop-logo" onclick="getHTML('/url/html/popup/page-settings.html').then(html => popUp(html,true))">
+                <div class="bkgctn inline-block" style="width:30px;height:100%;margin:0 auto;background-size:24px;background-image:url(./url/svg/photo.svg)"></div>
+                <div class="inline-block">App Builder</div>
+            </div>
+            <div id="shop-dash" class="bkgctn relative" onclick="myProfile()" style="width:50px;height:50px;background-size:20px;background-image:url(./url/svg/exit.svg);"></div>
+        </div>
+
+        <div id="app-menu" class="builder-menu app-menu"></div>
+
+        <div id="wheel-people" class="wheel">
+            <div style="touch-action: pan-x; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); transition: transform 0.3s ease 0s; transform: translateX(0%);">
+                <div class="whl on">
+
+                    <div class="absolute overflow-x">
+                        <div id="belt-builder" class="absolute belt belt-page left sticky" data-swp style="top:50px;width:100%;line-height:36px;">
+                            <div class="blt on">
+                                <!--<div id="save-page" class="bkgctn inline-block save" style="width:20px;height:20px;background-image:url(/url/svg/icon/settings.svg);opacity:0.5;margin:0 5px 0 0;"></div>-->
+                                <div class='bkgctn inline-block'>Home</div>
+                            </div>
+                            <div class="blt"><div contenteditable data-before="+ " placeholder="+ New tab" onkeypress="if((event.charCode || event.keyCode) === 13) { !event.target.isEmpty() ? confirmation('Are you sure you want to create this tab?').then(e => e ? createTab(event.target) : null) : null; return false; }"></div></div>
+                        </div>
+                        <div class="absolute" data-swp style="top:86px;width:100%;line-height:36px;border-bottom:2px solid #ddd;z-index: 1;"></div>
+
+                        <div id="flex-builder" class="flex relative" style="border-top-left-radius:10px;border-top-right-radius:10px;background:white;max-width:100%;min-height:calc(100% - 177px);margin:50px auto 0;padding: 38px 0 86px;flex-direction: column;justify-content: center;">
+                            <div class="pills pills-page relative" data-swp style="width:100%;line-height:36px;"></div>
+                            <div id="mda-builder" onclick="event.target.id === 'mda-builder' && event.target.isEmpty() ? selectTemplate(event.target) : null" class='mda mda-builder relative'></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="toolbar-builder" class="absolute bkgpic flex toolbar-builder" draggable="true" ondrag="moveTools(event.target.id === 'toolbar-builder' ? event.target : event.target.closest('#toolbar-builder'))" style="background-size:24px;justify-content:space-around;left:calc((100% - 50px)/2);top:calc(100% - 72px)">
+            <div id="block-tls" class="bkgctn relative" onclick="$(event.target.parentNode).toggleClass('open');" style="width:50px;height:50px;background-size:18px;background-image:url(./url/svg/tools.svg)"></div>
+            <div id="block-pgs" class="bkgctn relative" onclick="shopMenu(byId('shop-menu'))" style="width:50px;height:50px;background-size:18px;background-image:url(./url/svg/newpg.svg)" data-after="Page"></div>
+            <div id="block-add" class="bkgctn relative" onclick="getHTML('/url/html/block/create.html').then(html => popUp(html, true))" style="width:50px;height:50px;background-size:18px;background-image:url(./url/svg/block.svg)" data-after="Block"></div>
+            <div id="pages-tpl" class="bkgctn relative" onclick="selectTemplate(byId('mda-builder'))" style="width:50px;height:50px;background-size:24px;background-image:url(./url/svg/templates.svg)" data-after="Layout"></div>
+            <div id="block-mns" class="bkgctn relative" onclick="'/dashboard/demo/content/'.route()" style="background-image:url(./url/svg/mixed.svg)" data-after='Content'></div>
+            <div id="block-fle" class="bkgctn block-mns relative" onclick="getHTML('/url/html/popup/file-menu.html').then(html => popUp(html,true));" style="width:50px;height:50px;background-size:18px;background-image:url(./url/svg/3dots.svg);" data-after='File'></div>
+        </div>
+
+        <div class='absolute after' style='bottom:0px;width:100%;height:86px;background-image:linear-gradient(to bottom, rgba(0,0,0,0),rgba(255,255,255,1) calc(100%/2));z-index:123;'></div>
+
+      </div>
+
+    </div>
+
+    <script defer src='/url/js/hammer.min.js'></script>
+    <script async src='/url/js/lovefield.min.js'></script>
+    <script async src='/url/js/jpurey.js'></script>
+    <script async src='index.js'></script>
+
+  </body>
+
+</html>

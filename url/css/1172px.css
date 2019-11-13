@@ -1,0 +1,24 @@
+@media (max-width: 1172px) {
+  body.menu .mnu {/* left: 0; */transform: translateX(100%);}   
+  .wrapper {left: 0;width: calc(100% - 320px);}
+
+  .ads .description {font-size: 16px;max-height: 90px;line-height: 24px;}
+  .ads .watch { font-size: 16px; }
+
+  .dir .cart-page > .relative > .relative > :first-child {display: inline-block;width: 36px !important;height: 36px !important;padding: 0 !important;}
+  .dir .cart-page > .relative > .relative > :not(:first-child) {display: inline-block;}
+
+  .mnu {width: 240px;left: -240px;height: 100%;border: 0;transition: 1s transform, 1s filter;}
+  .mnu.active { width: 18%; }
+  .mnu.active + .content.dm.active {right: -25%;}
+  .mnu.active + .content.dm.active + .content.mz.active {left: 18%;width: 82%;}
+  .content.dm {width: 319px;}
+  .footer {width: 320px;}
+  .dir .cart-page > .relative > .relative {width: calc(100%/1);}
+
+  .register-profile > .relative:nth-child(1), .register-profile > .relative:nth-child(2) {width: calc((100% - 10px)/2);}
+  .register-profile > .relative:nth-child(1) > div, .register-profile > .relative:nth-child(3) > form {width: calc(100% - 20px);height: auto;}
+  .register-profile > .relative:nth-child(2) {width: 100%;max-width: 465px;margin: 0 10px 0 0;}
+  .register-profile > div:nth-child(3) {width: 465px;height: 465px;}
+  .register-account .register-form, .register-account .get-started {width: 50%;display: inline-block;vertical-align: top;text-align: center;}
+}
