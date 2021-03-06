@@ -1,3 +1,0 @@
-@media (max-width: 360px) {
-  [data-style='SingleRow1'] div.format {width: calc((100% - 10px)/2.5);}
-}

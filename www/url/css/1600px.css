@@ -1,5 +1,0 @@
-@media (max-width: 1600px) {
-  [data-style='SingleFull'] .format .vid, [data-style='SingleFull'] .format .pht, [data-style='SingleFull'] .format.ads > div { bottom: 50px; }
-  [data-style='ListFormat'] .item .itm { width: 320px; height: 320px; }
-  [data-style='ListFormat'] .item .itm + div { display: inline-block; width: calc(100% - 330px); }
-}

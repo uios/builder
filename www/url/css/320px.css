@@ -1,4 +1,0 @@
-@media (max-width: 320px) {
-  .znes .zne {font-size: 18px;line-height: 36px;margin: 0 5px;}
-  [data-style='SingleRow1'] div.format {width: calc((100% - 10px)/1.5);}
-}

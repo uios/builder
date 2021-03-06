@@ -1,7 +1,0 @@
-@media (max-width: 1024px) {  
-  .footer {width: 320px;margin: 0 0 0 auto;}
-  .notifications {width: calc(100% - 340px); }
-  .notifications.push { bottom: 0; }
-  [data-style='ThreeColumn'] .avatar.format[data-name]:after {top: calc(((100% - 36px)/2) - 25%);font-size: 18px;line-height: 36px;height: 36px;}
-  .tags > .tag {font-size: 40px;line-height: 50px;}
-}
